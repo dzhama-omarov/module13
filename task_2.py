@@ -7,3 +7,20 @@ print('Задача 2. Функция максимума')
 # По итогу в программе должны быть реализованы две функции:
 # 1) maximum_of_two — функция принимает два числа и возвращает одно (наибольшее из двух);
 # 2) maximum_of_three — функция принимает три числа и возвращает одно (наибольшее из трёх); при этом она должна использовать для сравнений первую функцию maximum_of_two.
+def maximum_of_two(num1, num2):
+    if num1 > num2:
+        return num1
+    elif num1 < num2:
+        return num2
+    else:
+        return None
+
+
+def maximum_of_three(num1, num2, num3):
+    return maximum_of_two(maximum_of_two(num1, num2), num3)
+
+num1 = float(input('Введите первое число: '))
+num2 = float(input('Введите второе число: '))
+num3 = float(input('Введите третье число: '))
+
+print(maximum_of_three(num1, num2, num3))
