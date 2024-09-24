@@ -19,3 +19,24 @@ print('Задача 3. Число наоборот 2')
  
 # Сумма: 522
 # Сумма наоборот: 225
+num1 = input('Введите первое число: ')
+num2 = input('Введите второе число: ')
+
+
+def reverse(number):
+    num_reversed = ''
+    for digit in number:
+        num_reversed = digit + num_reversed
+    return num_reversed
+
+
+num1r = reverse(num1)
+num2r = reverse(num2)
+summ = str(int(num1r) + int(num2r))
+summr = reverse(summ)
+
+print(f'\nПервое число наоборот: {num1r}')
+print(f'Второе число наоборот: {num2r}')
+print(f'Сумма: {summ}')
+
+print(f'\nСумма наоборот: {summr}')
